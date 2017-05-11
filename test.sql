@@ -76,7 +76,7 @@ CREATE TABLE `student` (
 -- Table structure for table `teachers`
 --
 
-CREATE TABLE `teachers` (
+CREATE TABLE `teacher` (
   `id` int(12) UNSIGNED NOT NULL,
   PRIMARY KEY(id),
   `privilege` varchar(50) NOT NULL,
