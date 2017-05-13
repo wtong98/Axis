@@ -1,0 +1,40 @@
+<head>
+	<link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<h1>Check In Form</h1>
+	<div class="info"><a href="http://www.imsa.edu" target="_blank"><p> Made by <i class="fa fa-heart"></i> <i>IMSA: Project AXIS </i></p></a></div>
+
+	<form action="checkin.php" method="post" >
+		<h1>Please enter the requested information below when to check a book back into the department.</h1>
+
+		<div class="contentform">
+			<div id="sendmessage"> Your check-in has been successfully processed. Thank you. </div>
+
+
+			<div class="leftcontact">
+				<div class="form-group">
+					<p>Book Name <span></span></p>
+					<span class="icon-case"><i class="fa fa-home"></i></span>
+					<input type="text" name="book_name" id="book_name" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>
+			</div>
+
+			<div class="rightcontact">	
+
+				<div class="form-group">
+					<p>Student ID <span>*</span></p>
+					<span class="icon-case"><i class="fa fa-info"></i></span>
+					<input type="text" name="student_id" id="student_id" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="bouton-contact">Check In</button>
+
+	</form>	
+
+
+</body>
+</html>

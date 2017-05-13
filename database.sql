@@ -7,6 +7,7 @@
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -26,6 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `book`
 --
 
+USE axis;
+
 CREATE TABLE `book` (
   `book_id` int(8) UNSIGNED NOT NULL AUTO_INCREMENT,
    PRIMARY KEY (book_id),
@@ -36,7 +39,7 @@ CREATE TABLE `book` (
   `fee` varchar(10),
   `dept_id` int(12) NOT NULL,
   FOREIGN KEY (dept_id) REFERENCES department(dept_id)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,7 +52,7 @@ CREATE TABLE `department` (
   PRIMARY KEY(dept_id),
   `name` varchar(50) NOT NULL,
   `dept_admin` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -68,7 +71,7 @@ CREATE TABLE `student` (
   `owed` varchar(50),
   `parent_email` varchar(50),
   `parent_number` varchar(15)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -83,7 +86,7 @@ CREATE TABLE `teacher` (
   `email` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `checking` (
 	`book_id` int(8) NOT NULL,
@@ -96,4 +99,17 @@ CREATE TABLE `checking` (
 	`date_checkedin` datetime,
 	`year_checkedout` int(4),
 	`semester_checkedout` varchar(10)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ---------------------------------------------------------
+-- Really all just for show
+CREATE TABLE 'records' (
+	'department' varchar(30) NOT NULL,
+	'book_id' INTEGER UNSIGNED NOT NULL,
+	'book_name' varchar(100) NOT NULL,
+	'student_name' varchar(50) NOT NULL,
+	'student_id' INTEGER UNSIGNED NOT NULL,
+	'teacher_name' varchar(30) NOT NULL,
+
+	PRIMARY KEY (student_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

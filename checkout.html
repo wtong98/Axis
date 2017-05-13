@@ -1,0 +1,69 @@
+<head>
+	<link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<h1>Check Out Form</h1>
+	<div class="info"><a href="http://www.imsa.edu" target="_blank"><p> Made by <i class="fa fa-heart"></i> <i>IMSA: Project AXIS </i></p></a></div>
+
+	<form action="checkout.php" method="post">
+		<h1>Please enter the requested information below in order to check a book out to a student.</h1>
+
+		<div class="contentform">
+			<div id="sendmessage"> Your checkout has been successfully processed. Thank you. </div>
+
+
+			<div class="leftcontact">
+
+				<div class="form-group">
+					<p>Department<span>*</span></p>
+					<span class="icon-case"><i class="fa fa-male"></i></span>
+					<input type="text" name="department" id="department" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>
+					<div class="validation"></div>
+				</div> 
+
+				<div class="form-group">
+					<p>IMSA Book ID <span>*</span></p>
+					<span class="icon-case"><i class="fa fa-user"></i></span>
+					<input type="text" name="book_id" id="book_id" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Prénom' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>
+
+				<div class="form-group">
+					<p>Book Name <span></span></p>
+					<span class="icon-case"><i class="fa fa-home"></i></span>
+					<input type="text" name="book_name" id="book_name" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Société' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>
+			</div>
+
+			<div class="rightcontact">	
+
+				<div class="form-group">
+					<p>Student's Name <span></span></p>
+					<span class="icon-case"><i class="fa fa-building-o"></i></span>
+					<input type="text" name="student_name" id="student_name" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Ville' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>	
+
+				<div class="form-group">
+					<p>Student ID #<span>*</span></p>	
+					<span class="icon-case"><i class="fa fa-phone"></i></span>
+					<input type="text" name="student_id" id="student_id" data-rule="maxlen:10" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Téléphone' doit être renseigné. Minimum 10 chiffres"/>
+					<div class="validation"></div>
+				</div>
+
+				<div class="form-group">
+					<p>Teacher's (Your) Last Name <span>*</span></p>
+					<span class="icon-case"><i class="fa fa-info"></i></span>
+					<input type="text" name="teacher_name" id="teacher_name" data-rule="required" data-msg="Vérifiez votre saisie sur les champs : Le champ 'Fonction' doit être renseigné."/>
+					<div class="validation"></div>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="bouton-contact">Check Out</button>
+
+	</form>	
+
+
+</body>
+</html>
